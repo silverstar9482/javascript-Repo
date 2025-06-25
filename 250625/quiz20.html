@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            h1 {
+                font-size: 1.7rem;
+            }
+            hr {
+                height: 1px;
+                background-color: #ddd;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>input에서 이름 받아 환영 메세지 출력</h1>
+        <hr />
+        <p>
+            아래 input에 이름을 입력하고, 버튼을 누르면 "환영합니다, 이름님!"을
+            출력해보세요.
+        </p>
+        <input type="text" id="userName" placeholder="이름을 입력하세요" />
+        <button type="button" onclick="userName();">코드실행</button>
+
+        <script>
+            const input = document.getElementById("userName");
+
+            function userName() {
+                const userName = input.value;
+                console.log(`환영합니다, ${userName}님!`);
+            }
+        </script>
+    </body>
+</html>

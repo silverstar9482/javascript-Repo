@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <style>
+            h1 {
+                font-size: 1.7rem;
+            }
+            hr {
+                height: 1px;
+                background-color: #ddd;
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>input 두 개에서 값 받아 곱 출력</h1>
+        <hr />
+        <p>
+            아래 두 input에 숫자를 입력하고, 버튼을 누르면 두 수의 곱을 템플릿
+            리터럴로 출력해보세요.
+        </p>
+        <input type="text" id="num1" />
+        <input type="text" id="num2" />
+        <button type="button" onclick="multi();">코드실행</button>
+
+        <script>
+            const input1 = document.getElementById("num1");
+            const input2 = document.getElementById("num2");
+
+            function multi() {
+                const num1 = Number(input1.value);
+                const num2 = +input2.value; //Number() 대신 +로도 써줄 수 있다.
+                console.log(`${num1} * ${num2} = ${num1 * num2}`);
+            }
+        </script>
+    </body>
+</html>
