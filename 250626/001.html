@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>select를 사용하여 배경색 바꾸기</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            div {
+                border: 1px solid rgba(255, 255, 255, 0.8);
+                background-color: rgba(255, 255, 255, 0.6);
+                border-radius: 0.6rem;
+                padding: 25px 40px;
+                width: 50%;
+                box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+            }
+            h1 {
+                font-size: 1rem;
+                /* color: #fff; */
+            }
+
+            select {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+                padding: 1px 3px;
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 과제 1 ) bodyChangeColor.html 셀렉트태그 이용 (색상을 여러가지 지정) -->
+        <div>
+            <h1>문서의 배경색 바꾸기</h1>
+            <select name="bgColor" id="bgColor">
+                <option value="MediumPurple">MediumPurple</option>
+                <option value="Turquoise">Turquoise</option>
+                <option value="Moccasin">Moccasin</option>
+                <option value="ForestGreen">ForestGreen</option>
+                <option value="SpringGreen">SpringGreen</option>
+                <option value="LightPink">LightPink</option>
+                <option value="LightSkyBlue">LightSkyBlue</option>
+            </select>
+        </div>
+
+        <script>
+            // selec박스 컬러 선택 시 선택한 배경색으로 변경
+            const select = document.getElementById("bgColor");
+            // 기본 배경색
+            document.body.style.backgroundColor = select.value;
+
+            document.addEventListener("change", function (e) {
+                console.log(e.target.value); // 클릭된 요소
+                document.body.style.backgroundColor = e.target.value;
+            });
+        </script>
+    </body>
+</html>
