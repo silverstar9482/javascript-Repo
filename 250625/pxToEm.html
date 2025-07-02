@@ -88,26 +88,30 @@
     <body>
         <section>
             <form action="#" method="get">
-                <fieldset>em 계산기</fieldset>
+                <fieldset>
+                    <legend>em 계산기</legend>
 
-                <label for="basePx">기본 폰트(px)</label>
-                <input type="text" id="basePx" name="basePx" />
+                    <label for="basePx">기본 폰트(px)</label>
+                    <input type="text" id="basePx" name="basePx" />
 
-                <label for="userPx">원하는 px값</label>
-                <input type="text" id="targetPx" name="targetPx" />
+                    <label for="userPx">원하는 px값</label>
+                    <input type="text" id="targetPx" name="targetPx" />
 
-                <button type="button" onclick="pxToEm();">em 값 계산</button>
-                <p>
-                    <span id="targetUserPx">0</span>px =
-                    <span id="result">0em</span>
-                </p>
+                    <button type="button" onclick="pxToEm();">
+                        em 값 계산
+                    </button>
+                    <p>
+                        <span id="targetUserPx">0</span>px =
+                        <span id="result">0em</span>
+                    </p>
+                </fieldset>
             </form>
         </section>
 
         <script>
             // id로 각 input의 변수 선언
-            inputBase = document.getElementById("basePx");
-            inputTarget = document.getElementById("targetPx");
+            const inputBase = document.getElementById("basePx");
+            const inputTarget = document.getElementById("targetPx");
 
             function pxToEm() {
                 // input에 값을 입력 시의 변수 선언
