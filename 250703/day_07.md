@@ -9,7 +9,7 @@
 
 ## ✨ 2. 요소의 크기/위치
 
--   getBoundingClientRect() div.getBoundingClientRect() -> -> 요소와 뷰포트 화면에서 얼마만큼 떨어져 있는지 나타낼때(x,y,width,height값이 나옴)
+-   getBoundingClientRect() -> div.getBoundingClientRect() -> 요소와 뷰포트 화면에서 얼마만큼 떨어져 있는지 나타낼때(x,y,width,height값이 나옴)
 -   offsetLeft -> a.offsetLeft() -> 가장 가까운 부모 요소의 좌측 상단으로부터 margin을 포함한 요소의 좌측 상단까지의 x축 거리
 -   offsetTop -> a.offsetLeft() -> 가장 가까운 부모 요소의 좌측 상단으로부터 margin을 포함한 요소의 좌측 상단까지의 y축 거리
 
